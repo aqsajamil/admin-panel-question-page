@@ -6,4 +6,63 @@
 
 body{
     font-family: sans-serif;
+    background-color: #ECF1F6;
+}
+.iconBar {
+    width: 90px;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  
+  .iconBar a {
+    display: block;
+    text-align: center;
+    transition: 0.4s;
+    color: black;
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconBar a.active{
+      background-color: #F0F7FF;
+  }
+  
+  .iconBar a svg path{
+    transition: 0.4s;
+  }
+
+
+.iconBar a.active svg path{
+    stroke:#0077FF;
+    /* fill: #0077FF; */
+}
+
+
+.iconBar a::before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    transform: scaleY(0);
+    background-color: #0077FF;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 0.4s;
+}
+
+
+.iconBar a.active::before{
+    transform: scaleY(1);
 }
